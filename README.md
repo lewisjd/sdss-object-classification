@@ -33,40 +33,6 @@ Two small helpers keep repeated settings in one place: `model_helpers.py` contai
 feature names and forest settings; `plot_helpers.py` contains plot colours, fonts
 and functions for reading tables and saving figures. You do not run these separately.
 
-## Run it
-
-The results were produced with Python 3.12. From PowerShell in this folder,
-set up the environment once:
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-```
-
-If the environment is already installed, go straight to the numbered scripts below.
-Run them in order, waiting for each to finish successfully:
-
-```powershell
-.\.venv\Scripts\python.exe src/01_prepare_data.py
-.\.venv\Scripts\python.exe src/02_summarise_data.py
-.\.venv\Scripts\python.exe src/03_split_data.py
-.\.venv\Scripts\python.exe src/04_cross_validate.py
-.\.venv\Scripts\python.exe src/05_compare_models.py
-.\.venv\Scripts\python.exe src/06_feature_importance.py
-.\.venv\Scripts\python.exe src/07_analyse_errors.py
-.\.venv\Scripts\python.exe src/08_plot_sample.py
-.\.venv\Scripts\python.exe src/09_plot_models.py
-.\.venv\Scripts\python.exe src/10_plot_accuracy.py
-.\.venv\Scripts\python.exe src/11_plot_mistakes.py
-```
-
-Training takes several minutes because it includes five-fold cross-validation
-and repeated feature shuffling. To change only the plots, rerun the relevant
-script from 08-11.
-Running the scripts again replaces the previous CSV results and figures.
-Script 06 refits the selected forest using the same training data so it can run
-separately without needing a saved model file.
-
 ## SQL used in the project
 
 The queries run through DuckDB on the pandas tables supplied by the Python scripts.
@@ -123,12 +89,3 @@ Scripts 01, 03 and 05 create five working files in `data/`: `prepared_data.csv`,
 They can be regenerated, so Git ignores them. The original input, result tables
 and PNG figures are included. `.venv/` is just the local Python environment and
 is also ignored.
-
-## Report
-
-Open [report/SDSS_report.pdf](report/SDSS_report.pdf), or upload
-[report/SDSS_report_overleaf.zip](report/SDSS_report_overleaf.zip) to Overleaf.
-The report uses only the main findings and three figures. Its source is
-`report/main.tex`; `report/README.txt` gives the upload instructions.
-The report is a saved write-up: changing the analysis does not automatically
-update its text or its copies of the figures.
