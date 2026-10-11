@@ -2,7 +2,17 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-data/raw/
-data/processed/
-*.duckdb
 .DS_Store
+
+# Working CSV files can be recreated by running the scripts.
+data/prepared_data.csv
+data/train_data.csv
+data/test_data.csv
+data/train_test_split.csv
+data/test_predictions.csv
+
+# Temporary LaTeX files; keep the report source, PDF and Overleaf ZIP.
+*.aux
+*.log
+*.out
+*.synctex.gz

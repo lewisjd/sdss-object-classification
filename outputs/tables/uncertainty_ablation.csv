@@ -1,0 +1,3 @@
+model,features,train_accuracy,test_accuracy,balanced_accuracy,macro_f1,weighted_f1,test_count,accuracy_difference_pp_from_full
+random_forest,14,1.0,0.95,0.9050763269809489,0.9105105933360513,0.949607949262483,10000,0.0
+random_forest_no_errors,9,1.0,0.9311,0.8884953521669138,0.8933370200447106,0.9306822601972282,10000,-1.8899999999999917

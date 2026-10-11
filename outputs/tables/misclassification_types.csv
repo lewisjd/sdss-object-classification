@@ -1,0 +1,7 @@
+class,predicted_class,count,percentage_of_errors
+QSO,STAR,125,25.0
+STAR,QSO,112,22.4
+STAR,GALAXY,107,21.4
+QSO,GALAXY,62,12.4
+GALAXY,STAR,59,11.8
+GALAXY,QSO,35,7.0
