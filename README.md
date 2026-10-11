@@ -10,7 +10,6 @@ data/       The original SDSS CSV and CSV files made during the analysis
 src/        Small Python scripts, numbered in the order to run them
 sql/        Five queries for data checks, summaries, features and error analysis
 outputs/    tables/ contains CSV results; figures/ contains PNG plots
-report/     The short report, its PDF and the ZIP for Overleaf
 ```
 
 The scripts run from top to bottom. Each has comments explaining the main steps.
